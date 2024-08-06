@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3Linear</title>
     <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; /* Black background */
+            color: #0000FF; /* Blue text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            text-align: center;
+            font-size: 18px;
+            overflow: hidden;
+            animation: fadeOut 5s forwards;
+        }
+
+        .loading-text {
+            font-size: 20px;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+        /* Existing styles */
         body {
             background-color: #0000AA;
             color: #FFFFFF;
@@ -12,30 +59,38 @@
             margin: 0;
             padding: 20px;
         }
+
         .container {
-            width: 600px;
+            width: 90%;
+            max-width: 600px;
             border: 1px solid #FFFFFF;
             padding: 20px;
             margin: 0 auto;
         }
+
         .header, .section {
             margin-bottom: 20px;
         }
+
         .header {
             font-size: 20px;
             text-align: center;
         }
+
         .section {
             font-size: 14px;
         }
+
         .divider {
             border-bottom: 1px solid #FFFFFF;
             margin: 20px 0;
         }
+
         .sub-header {
             font-size: 18px;
             margin-bottom: 10px;
         }
+
         .image {
             text-align: center;
             margin-top: 20px;
@@ -43,6 +98,9 @@
     </style>
 </head>
 <body>
+    <div class="loading-screen">
+        <div class="loading-text">Booting up...</div>
+    </div>
     <div class="container">
         <div class="header">
             About me
@@ -93,6 +151,14 @@
             -A github sidequest-
         </div>
     </div>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.animation = 'fadeOut 5s forwards';
+            }
+        });
+    </script>
 </body>
 </html>
 
