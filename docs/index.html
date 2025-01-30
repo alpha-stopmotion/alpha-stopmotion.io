@@ -5,96 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha-stopmotion simplified website</title>
     <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: "Courier New", Courier, monospace;
-        }
-
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000; /* Black background */
-            color: #0000FF; /* Blue text color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            text-align: center;
-            font-size: 18px;
-            overflow: hidden;
-            animation: fadeOut 30s forwards;
-        }
-
-        .loading-text {
-            font-size: 20px;
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                display: none;
-            }
-        }
-
-        /* Existing styles */
-        body {
-            background-color: #0000AA;
-            color: #FFFFFF;
-            font-family: "Courier New", Courier, monospace;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 600px;
-            border: 1px solid #FFFFFF;
-            padding: 20px;
-            margin: 0 auto;
-        }
-
-        .header, .section {
-            margin-bottom: 20px;
-        }
-
-        .header {
-            font-size: 20px;
-            text-align: center;
-        }
-
-        .section {
-            font-size: 14px;
-        }
-
-        .divider {
-            border-bottom: 1px solid #FFFFFF;
-            margin: 20px 0;
-        }
-
-        .sub-header {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .image {
-            text-align: center;
-            margin-top: 20px;
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html,body{margin:0;padding:0;height:100%;font-family:"Courier New",Courier,monospace}
+        .loading-screen{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000000;color:#0000FF;display:flex;justify-content:center;align-items:center;z-index:9999;text-align:center;font-size:18px;overflow:hidden;animation:fadeOut 30s forwards}
+        .loading-text{font-size:20px}
+        @keyframes fadeOut{0%{opacity:1}100%{opacity:0;display:none}}
+        body{background-color:#0000AA;color:#FFFFFF;font-family:"Courier New",Courier,monospace;margin:0;padding:20px}
+        .container{width:90%;max-width:600px;border:1px solid #FFFFFF;padding:20px;margin:0 auto}
+        .header,.section{margin-bottom:20px}
+        .header{font-size:20px;text-align:center}
+        .section{font-size:14px}
+        .divider{border-bottom:1px solid #FFFFFF;margin:20px 0}
+        .sub-header{font-size:18px;margin-bottom:10px}
+        .image{text-align:center;margin-top:20px}
     </style>
 </head>
 <body>
@@ -152,13 +75,8 @@
         </div>
     </div>
     <script>
-        window.addEventListener('load', () => {
-            const loadingScreen = document.querySelector('.loading-screen');
-            if (loadingScreen) {
-                loadingScreen.style.animation = 'fadeOut 5s forwards';
-            }
-        });
+        (function(){
+            let _0x2f5f=["\x6C\x6F\x61\x64\x69\x6E\x67\x2D\x73\x63\x72\x65\x65\x6E"];let _0x27c3=["\x66\x61\x64\x65\x4F\x75\x74"];let _0x1a2b=document.querySelector(_0x2f5f[0]);window.addEventListener("\x6C\x6F\x61\x64",function(){if(_0x1a2b){_0x1a2b.style[_0x27c3[0]]="\x66\x61\x64\x65\x4F\x75\x74\x20\x35\x73\x20\x66\x6F\x72\x77\x61\x72\x64";}})})();
     </script>
 </body>
 </html>
-
