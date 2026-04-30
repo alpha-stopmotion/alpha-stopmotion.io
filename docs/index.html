@@ -122,6 +122,17 @@
             background: #000;
         }
 
+        /* Image & Video Styling Classes */
+        .img-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .img-scale:hover {
+            transform: scale(1.05); 
+        }
+        .img-shadow {
+            filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2));
+        }
+
         /* Scroll Animation Classes */
         .fade-in {
             opacity: 0;
@@ -194,7 +205,7 @@
             </div>
             <div class="fade-in" style="background: rgba(255,255,255,0.2); padding: 3rem; border-radius: 12px; text-align: center;">
                 <h3>The PUSH. Mechanism</h3>
-                <p><em>Placeholder befitting of shitting on someone</em></p>
+                <video src="Push.mp4" autoplay loop muted playsinline class="img-shadow img-scale" style="max-width: 100%; height: auto; border-radius: 8px;"></video>
             </div>
         </div>
     </section>
