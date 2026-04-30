@@ -1,308 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUSH. Lip Balm | How much crack do i need </title>
-    <style>
-        /* --- CSS STYLES --- */
-        :root {
-            --brand-yellow: #fce69a;
-            --brand-pink: #f4c0c0;
-            --brand-green: #d1e2cd;
-            --text-dark: #2c2c2c;
-            --text-light: #ffffff;
-            --font-main: 'Helvetica Neue', Arial, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-main);
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #fafafa;
-        }
-
-        /* Typography */
-        h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
-        h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; text-transform: uppercase; }
-        h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
-        p { font-size: 1.1rem; margin-bottom: 1rem; }
-        .highlight { font-weight: bold; background: rgba(255,255,255,0.4); padding: 0 5px; }
-
-        /* Layout & Sections */
-        section {
-            padding: 6rem 10%;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Specific Sections Backgrounds */
-        #hero { background-color: var(--brand-green); text-align: center; min-height: 100vh; }
-        #problem-validation { background-color: var(--brand-pink); }
-        #product-design { background-color: var(--brand-green); }
-        #market-strategy { background-color: var(--brand-yellow); }
-        #pricing { background-color: var(--brand-yellow); }
-        #advertising { background-color: var(--brand-pink); }
-
-        /* Cards & Elements */
-        .stat-card {
-            background: rgba(255, 255, 255, 0.3);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .design-list li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            list-style: none;
-            padding-left: 20px;
-            border-left: 4px solid var(--text-dark);
-        }
-
-        .pro-con-box {
-            background: rgba(255,255,255,0.3);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2.5rem;
-            background: var(--text-dark);
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: background 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background: #000;
-        }
-
-        /* Image & Video Styling Classes */
-        .img-scale {
-            transition: transform 0.3s ease-in-out;
-        }
-        .img-scale:hover {
-            transform: scale(1.05); 
-        }
-        .img-shadow {
-            filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2));
-        }
-
-        /* Scroll Animation Classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
-            section { padding: 4rem 5%; }
-        }
-    </style>
+<title>PUSH. Lip Balm | Little website</title>
+<style>
+/* CSS?? never heard of her */
+body, html { margin:0; padding:0; background:#fafafa; font-family: sans-serif; overflow-x: hidden; }
+.div1 { background-color:#d1e2cd; padding-top:150px; padding-bottom:150px; text-align:center; }
+.div2 { background-color:#f4c0c0; padding:100px; }
+.div3 { background-color:#fce69a; padding:100px; }
+.bigword1 { font-size: 64px; font-weight: 900; margin-bottom: 20px;}
+.bigword2 { font-size: 40px; font-weight: bold; text-transform: uppercase; }
+.clicky_thing { background: black; color: white; padding: 20px 40px; border-radius: 99px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 30px;}
+.box { background: rgba(255,255,255,0.3); padding: 20px; border-radius: 10px; border: 1px solid #ccc; margin: 10px; width: 30%; display: inline-block; vertical-align: top; text-align: center;}
+.numm { font-size: 55px; font-weight: bold; }
+.vid_thing { width: 100%; border-radius: 8px; box-shadow: 5px 10px 15px gray; transition: 0.3s; }
+.vid_thing:hover { transform: scale(1.05) rotate(2deg); }
+.hid { opacity: 0; margin-top: 50px; transition: 1s all; }
+.see { opacity: 1; margin-top: 0px; }
+.left_s { width: 45%; display: inline-block; vertical-align: top; padding: 20px; }
+.right_s { width: 45%; display: inline-block; vertical-align: top; padding: 20px; }
+ul li { margin-bottom: 15px; }
+</style>
 </head>
 <body>
 
-    <section id="hero">
-        <div class="container fade-in">
-            <h1>PUSH. YOUR STYLE.</h1>
-            <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto;">
-                The revolutionary lip balm design that eliminates waste and frustration. 
-                <br>Never dig out the remaining product again.
-            </p>
-            <a href="#problem-validation" class="cta-btn">View Stactistics</a>
+<div class="div1">
+    <div class="hid see" style="width: 800px; margin: 0 auto;">
+        <div class="bigword1">PUSH. YOUR STYLE.</div>
+        <font size="5">The revolutionary lip balm design that eliminates waste and frustration. <br>Never dig out the remaining product again.</font><br>
+        <a href="#stats" class="clicky_thing">View Stactistics</a>
+    </div>
+</div>
+
+<div id="stats" class="div2">
+<div style="width:1100px; margin:0 auto;">
+<div class="bigword2 hid">The Problem & Demand</div><br>
+<div style="margin-bottom: 40px; font-size: 18px;" class="hid">Our market research indicates a clear consumer frustration with standard lip balm tubes and a massive demand for our solution.</div>
+<div>
+    <div class="box hid"><span class="numm">85.1%</span><br><br><b style="font-size:24px;">Frustration Rate</b><br><br>Combined frustration rate of users who can no longer twist up the remaining lip balm at the bottom of standard tubes. An incredibly strong emotional hook.</div>
+    <div class="box hid"><span class="numm">66%</span><br><br><b style="font-size:24px;">Reach the End</b><br><br>Of respondents rarely or never throw tubes away early. Our push-up feature eliminates the need to dig out the remaining balm.</div>
+    <div class="box hid"><span class="numm">74%</span><br><br><b style="font-size:24px;">High Appeal</b><br><br>Rated our push-up tube design as highly appealing (4 or 5 out of 5), validating our solution and confirming market demand.</div>
+</div>
+</div>
+</div>
+
+<div class="div1" style="text-align:left;">
+<div style="width:1100px; margin:0 auto;">
+    <div class="left_s hid">
+        <div class="bigword2">The Innovation</div><br>
+        <font size="4">The PUSH. Lip Balm utilizes a proprietary mechanical design to ensure zero waste.</font><br><br>
+        <ul>
+            <li><b>Lid:</b> Designed with a rod on the side used to push the remaining product.</li>
+            <li><b>Base Disc:</b> Ensures that all product is pushed up evenly, rather than just the center.</li>
+            <li><b>Elevator:</b> Holds the lip balm and is weaved along the spirals of the external tube.</li>
+            <li><b>External Tube:</b> Features spiraled grooves on the inside for smooth elevation.</li>
+            <li><b>Internal Tube:</b> Contains the locking mechanism for top/bottom and facilitates turning the balm up and down.</li>
+        </ul>
+    </div>
+    <div class="right_s hid" style="background: rgba(255,255,255,0.2); border-radius:12px; text-align:center;">
+        <div style="font-size:24px; font-weight:bold; margin-bottom: 20px;">The PUSH. Mechanism</div>
+        <video src="Push.mp4" autoplay loop muted playsinline class="vid_thing"></video>
+    </div>
+</div>
+</div>
+
+<div class="div3">
+<div style="width:1100px; margin:0 auto;">
+    <div class="left_s hid">
+        <div class="bigword2">Initial Product Lineup</div><br>
+        Based on consumer preferences, we are minimizing risk and maximizing early sales by focusing our first product drops on the most requested scent profiles.<br><br><br>
+        <b style="font-size:24px;">Scent Preferences</b><br><br>
+        <span style="background:white; font-weight:bold; padding: 2px;">59.3%</span> prefer Fruity scents (Strawberry, Yuzu, Peach).<br><br>
+        <span style="background:white; font-weight:bold; padding: 2px;">40.7%</span> prefer Floral scents (Rose, Lavender, Green Tea).<br><br>
+        Overall, 58.9% of users actively prefer scented/flavored options.
+    </div>
+    <div class="right_s hid">
+        <div class="bigword2">Price Positioning</div><br>
+        Our market survey clearly indicates the sweet spot for a high-quality lip balm.<br><br>
+        <div style="background: rgba(255,255,255,0.3); padding:40px; text-align:center; border-radius:10px;">
+            <div style="font-size:40px; font-weight:bold;">100 - 150 THB</div><br>
+            Target Price Range<br><br>
+            <b>51.9%</b> of respondents cap their spending in this exact range, guiding our ideal retail price point.
         </div>
-    </section>
+    </div>
+</div>
+</div>
 
-    <section id="problem-validation">
-        <div class="container">
-            <h2 class="fade-in">The Problem & Demand</h2>
-            <p class="fade-in" style="margin-bottom: 3rem;">Our market research indicates a clear consumer frustration with standard lip balm tubes and a massive demand for our solution.</p>
-            
-            <div class="grid-3">
-                <div class="stat-card fade-in">
-                    <span class="stat-number">85.1%</span>
-                    <h3>Frustration Rate</h3>
-                    <p>Combined frustration rate of users who can no longer twist up the remaining lip balm at the bottom of standard tubes. An incredibly strong emotional hook.</p>
-                </div>
-                <div class="stat-card fade-in" style="transition-delay: 0.2s;">
-                    <span class="stat-number">66%</span>
-                    <h3>Reach the End</h3>
-                    <p>Of respondents rarely or never throw tubes away early. Our push-up feature eliminates the need to dig out the remaining balm.</p>
-                </div>
-                <div class="stat-card fade-in" style="transition-delay: 0.4s;">
-                    <span class="stat-number">74%</span>
-                    <h3>High Appeal</h3>
-                    <p>Rated our push-up tube design as highly appealing (4 or 5 out of 5), validating our solution and confirming market demand.</p>
-                </div>
-            </div>
+<div class="div3" style="padding-top:0px;">
+<div style="width:1100px; margin:0 auto;">
+    <center class="hid"><div class="bigword2">Pricing Strategy & Lifecycle</div></center><br><br>
+    <div class="left_s hid" style="background:rgba(255,255,255,0.3); border-radius:8px; width: 42%; margin-right: 2%;">
+        <b style="font-size:24px;">Phase 1: Initial Launch</b><br><br>
+        <b>Penetration Pricing:</b> 20% sale/discount for the first 3 months.<br><br>
+        <ul>
+            <li><b>Pros:</b> Quickly grabs market share; encourages buyers to try our unique design.</li>
+            <li><b>Cons:</b> Results in smaller profit margins initially; high production costs risk early negative cash flow.</li>
+        </ul>
+    </div>
+    <div class="right_s hid" style="background:rgba(255,255,255,0.3); border-radius:8px; width: 42%;">
+        <b style="font-size:24px;">Phase 2: When Established</b><br><br>
+        <b>Competitive Pricing</b><br><br>
+        <ul>
+            <li><b>Pros:</b> Differentiates brand through USP rather than price; retains loyal customers despite small price increases.</li>
+            <li><b>Cons:</b> Must rely heavily on non-price ways to attract sales; monitoring competitor prices is time-consuming.</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<div class="div2">
+<div style="width:1100px; margin:0 auto;">
+    <div class="left_s hid">
+        <div class="bigword2">Go-to-Market Strategy</div><br>
+        <b style="font-size:24px;">Distribution</b><br><br>
+        Omnichannel approach focusing on specialty beauty retailers (<b style="background:white; padding: 2px;">Sephora, Beautrium, eveandboy</b>) alongside direct-to-consumer sales via the PUSH. website for global reach.<br><br><br>
+        <b style="font-size:24px;">Advertising Focus</b><br><br>
+        Our Unique Selling Proposition (USP) is the focal point. We will heavily utilize vertical video formats (TikTok, Instagram Reels) to visually demonstrate the push-up mechanism solving the frustration of wasted product.<br><br>
+        <i>Risks mitigated:</i> To combat intense competition and ad fatigue, we are budgeting for continuous, fresh content creation.
+    </div>
+    <div class="right_s hid" style="background:white; border-radius:12px; transform: rotate(2deg);">
+        <div style="background:#f4c0c0; padding: 50px; text-align:center; border-radius:8px; margin: 15px;">
+            <div style="font-size:48px; font-weight:bold;">PUSH. PEACH.</div><br><br>
+            <b style="font-size:24px;">NEVER BE FRUSTRATED OVER REMAINING PRODUCT AGAIN.</b>
         </div>
-    </section>
+    </div>
+</div>
+</div>
 
-    <section id="product-design">
-        <div class="container grid-2">
-            <div class="fade-in">
-                <h2>The Innovation</h2>
-                <p>The PUSH. Lip Balm utilizes a proprietary mechanical design to ensure zero waste.</p>
-                <ul class="design-list">
-                    <li><strong>Lid:</strong> Designed with a rod on the side used to push the remaining product.</li>
-                    <li><strong>Base Disc:</strong> Ensures that all product is pushed up evenly, rather than just the center.</li>
-                    <li><strong>Elevator:</strong> Holds the lip balm and is weaved along the spirals of the external tube.</li>
-                    <li><strong>External Tube:</strong> Features spiraled grooves on the inside for smooth elevation.</li>
-                    <li><strong>Internal Tube:</strong> Contains the locking mechanism for top/bottom and facilitates turning the balm up and down.</li>
-                </ul>
-            </div>
-            <div class="fade-in" style="background: rgba(255,255,255,0.2); padding: 3rem; border-radius: 12px; text-align: center;">
-                <h3>The PUSH. Mechanism</h3>
-                <video src="Push.mp4" autoplay loop muted playsinline class="img-shadow img-scale" style="max-width: 100%; height: auto; border-radius: 8px;"></video>
-            </div>
-        </div>
-    </section>
-
-    <section id="market-strategy">
-        <div class="container grid-2">
-            <div class="fade-in">
-                <h2>Initial Product Lineup</h2>
-                <p>Based on consumer preferences, we are minimizing risk and maximizing early sales by focusing our first product drops on the most requested scent profiles.</p>
-                <div style="margin-top: 2rem;">
-                    <h3>Scent Preferences</h3>
-                    <p><span class="highlight">59.3%</span> prefer Fruity scents (Strawberry, Yuzu, Peach).</p>
-                    <p><span class="highlight">40.7%</span> prefer Floral scents (Rose, Lavender, Green Tea).</p>
-                    <p>Overall, 58.9% of users actively prefer scented/flavored options.</p>
-                </div>
-            </div>
-            <div class="fade-in">
-                <h2>Price Positioning</h2>
-                <p>Our market survey clearly indicates the sweet spot for a high-quality lip balm.</p>
-                <div class="stat-card">
-                    <span class="stat-number" style="font-size: 2.5rem;">100 - 150 THB</span>
-                    <p>Target Price Range</p>
-                    <p><strong>51.9%</strong> of respondents cap their spending in this exact range, guiding our ideal retail price point.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing">
-        <div class="container">
-            <h2 class="fade-in text-center" style="text-align: center;">Pricing Strategy & Lifecycle</h2>
-            <div class="grid-2" style="margin-top: 3rem;">
-                <div class="pro-con-box fade-in">
-                    <h3>Phase 1: Initial Launch</h3>
-                    <p><strong>Penetration Pricing:</strong> 20% sale/discount for the first 3 months.</p>
-                    <ul style="margin-top: 1rem; padding-left: 20px;">
-                        <li><strong>Pros:</strong> Quickly grabs market share; encourages buyers to try our unique design.</li>
-                        <li><strong>Cons:</strong> Results in smaller profit margins initially; high production costs risk early negative cash flow.</li>
-                    </ul>
-                </div>
-                <div class="pro-con-box fade-in" style="transition-delay: 0.2s;">
-                    <h3>Phase 2: When Established</h3>
-                    <p><strong>Competitive Pricing</strong></p>
-                    <ul style="margin-top: 1rem; padding-left: 20px;">
-                        <li><strong>Pros:</strong> Differentiates brand through USP rather than price; retains loyal customers despite small price increases.</li>
-                        <li><strong>Cons:</strong> Must rely heavily on non-price ways to attract sales; monitoring competitor prices is time-consuming.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="advertising">
-        <div class="container grid-2">
-            <div class="fade-in">
-                <h2>Go-to-Market Strategy</h2>
-                <h3>Distribution</h3>
-                <p>Omnichannel approach focusing on specialty beauty retailers (<span class="highlight">Sephora, Beautrium, eveandboy</span>) alongside direct-to-consumer sales via the PUSH. website for global reach.</p>
-                
-                <h3 style="margin-top: 2rem;">Advertising Focus</h3>
-                <p>Our Unique Selling Proposition (USP) is the focal point. We will heavily utilize vertical video formats (TikTok, Instagram Reels) to visually demonstrate the push-up mechanism solving the frustration of wasted product.</p>
-                <p><em>Risks mitigated:</em> To combat intense competition and ad fatigue, we are budgeting for continuous, fresh content creation.</p>
-            </div>
-            <div class="fade-in" style="text-align: center; background: #fff; padding: 1rem; border-radius: 12px; transform: rotate(2deg);">
-                <div style="background: var(--brand-pink); padding: 4rem 2rem; border-radius: 8px;">
-                    <h2 style="font-size: 3rem;">PUSH. PEACH.</h2>
-                    <h3 style="margin-top: 2rem;">NEVER BE FRUSTRATED OVER REMAINING PRODUCT AGAIN.</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Intersection Observer to handle fade-in animations on scroll
-        document.addEventListener("DOMContentLoaded", function() {
-            const faders = document.querySelectorAll('.fade-in');
-            
-            const appearOptions = {
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    } else {
-                        entry.target.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
-        });
-    </script>
+<script>
+// I copied this from a forum in 2008
+var things_to_hide = document.querySelectorAll(".hid");
+window.onscroll = function() {
+    for(var i = 0; i < things_to_hide.length; i++) {
+        if(things_to_hide[i].getBoundingClientRect().top < window.innerHeight - 100) {
+            things_to_hide[i].classList.add("see");
+        }
+    }
+}
+// trigger once on load just in case
+window.onscroll();
+</script>
 </body>
 </html>
