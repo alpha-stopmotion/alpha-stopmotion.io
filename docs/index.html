@@ -1,82 +1,297 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha-stopmotion simplified website</title>
+    <title>PUSH. Lip Balm | Investor Pitch</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        html,body{margin:0;padding:0;height:100%;font-family:"Courier New",Courier,monospace}
-        .loading-screen{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000000;color:#0000FF;display:flex;justify-content:center;align-items:center;z-index:9999;text-align:center;font-size:18px;overflow:hidden;animation:fadeOut 30s forwards}
-        .loading-text{font-size:20px}
-        @keyframes fadeOut{0%{opacity:1}100%{opacity:0;display:none}}
-        body{background-color:#0000AA;color:#FFFFFF;font-family:"Courier New",Courier,monospace;margin:0;padding:20px}
-        .container{width:90%;max-width:600px;border:1px solid #FFFFFF;padding:20px;margin:0 auto}
-        .header,.section{margin-bottom:20px}
-        .header{font-size:20px;text-align:center}
-        .section{font-size:14px}
-        .divider{border-bottom:1px solid #FFFFFF;margin:20px 0}
-        .sub-header{font-size:18px;margin-bottom:10px}
-        .image{text-align:center;margin-top:20px}
+        /* --- CSS STYLES --- */
+        :root {
+            --brand-yellow: #fce69a;
+            --brand-pink: #f4c0c0;
+            --brand-green: #d1e2cd;
+            --text-dark: #2c2c2c;
+            --text-light: #ffffff;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+
+        /* Typography */
+        h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; text-transform: uppercase; }
+        h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+        p { font-size: 1.1rem; margin-bottom: 1rem; }
+        .highlight { font-weight: bold; background: rgba(255,255,255,0.4); padding: 0 5px; }
+
+        /* Layout & Sections */
+        section {
+            padding: 6rem 10%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Specific Sections Backgrounds */
+        #hero { background-color: var(--brand-green); text-align: center; min-height: 100vh; }
+        #problem-validation { background-color: var(--brand-pink); }
+        #product-design { background-color: var(--brand-green); }
+        #market-strategy { background-color: var(--brand-yellow); }
+        #pricing { background-color: var(--brand-yellow); }
+        #advertising { background-color: var(--brand-pink); }
+
+        /* Cards & Elements */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .design-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            list-style: none;
+            padding-left: 20px;
+            border-left: 4px solid var(--text-dark);
+        }
+
+        .pro-con-box {
+            background: rgba(255,255,255,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: var(--text-dark);
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #000;
+        }
+
+        /* Scroll Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+            section { padding: 4rem 5%; }
+        }
     </style>
 </head>
 <body>
-    <div class="loading-screen">
-        <div class="loading-text">Booting up...</div>
-    </div>
-    <div class="container">
-        <div class="header">
-            About me
+
+    <section id="hero">
+        <div class="container fade-in">
+            <h1>PUSH. YOUR STYLE.</h1>
+            <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto;">
+                The revolutionary lip balm design that eliminates waste and frustration. 
+                <br>Never dig out the remaining product again.
+            </p>
+            <a href="#problem-validation" class="cta-btn">View Investor Deck</a>
         </div>
-        <div class="section">
-            3linear, my discord username. I am a part-time 3d modeler and a 3d animator. I currently do not wish to work for anyone, but I am selling IGCSE notes about science.
+    </section>
+
+    <section id="problem-validation">
+        <div class="container">
+            <h2 class="fade-in">The Problem & Demand</h2>
+            <p class="fade-in" style="margin-bottom: 3rem;">Our market research indicates a clear consumer frustration with standard lip balm tubes and a massive demand for our solution.</p>
+            
+            <div class="grid-3">
+                <div class="stat-card fade-in">
+                    <span class="stat-number">85.1%</span>
+                    <h3>Frustration Rate</h3>
+                    <p>Combined frustration rate of users who can no longer twist up the remaining lip balm at the bottom of standard tubes. An incredibly strong emotional hook.</p>
+                </div>
+                <div class="stat-card fade-in" style="transition-delay: 0.2s;">
+                    <span class="stat-number">66%</span>
+                    <h3>Reach the End</h3>
+                    <p>Of respondents rarely or never throw tubes away early. Our push-up feature eliminates the need to dig out the remaining balm.</p>
+                </div>
+                <div class="stat-card fade-in" style="transition-delay: 0.4s;">
+                    <span class="stat-number">74%</span>
+                    <h3>High Appeal</h3>
+                    <p>Rated our push-up tube design as highly appealing (4 or 5 out of 5), validating our solution and confirming market demand.</p>
+                </div>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="section">
-            I have been learning HTML and been practicing key-framing and 3d modeling. One issue a 3d modeler would have is creating complex shapes. Luckily, Blender is a really useful and versatile tool for modeling and other such things, such as animating. Sooner or later, I may start modeling as a part-time job.
+    </section>
+
+    <section id="product-design">
+        <div class="container grid-2">
+            <div class="fade-in">
+                <h2>The Innovation</h2>
+                <p>The PUSH. Lip Balm utilizes a proprietary mechanical design to ensure zero waste.</p>
+                <ul class="design-list">
+                    <li><strong>Lid:</strong> Designed with a rod on the side used to push the remaining product.</li>
+                    <li><strong>Base Disc:</strong> Ensures that all product is pushed up evenly, rather than just the center.</li>
+                    <li><strong>Elevator:</strong> Holds the lip balm and is weaved along the spirals of the external tube.</li>
+                    <li><strong>External Tube:</strong> Features spiraled grooves on the inside for smooth elevation.</li>
+                    <li><strong>Internal Tube:</strong> Contains the locking mechanism for top/bottom and facilitates turning the balm up and down.</li>
+                </ul>
+            </div>
+            <div class="fade-in" style="background: rgba(255,255,255,0.2); padding: 3rem; border-radius: 12px; text-align: center;">
+                <h3>The PUSH. Mechanism</h3>
+                <p><em>(Insert 3D CAD GIF/Render here demonstrating the lid inserted into the base to push up the disc)</em></p>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="section">
-            Currently, I have not added the IGCSE notes as I am still reviewing them. These notes are for science, for IGCSE, Thailand. Below, I will continue listing about the IGCSE notes.
+    </section>
+
+    <section id="market-strategy">
+        <div class="container grid-2">
+            <div class="fade-in">
+                <h2>Initial Product Lineup</h2>
+                <p>Based on consumer preferences, we are minimizing risk and maximizing early sales by focusing our first product drops on the most requested scent profiles.</p>
+                <div style="margin-top: 2rem;">
+                    <h3>Scent Preferences</h3>
+                    <p><span class="highlight">59.3%</span> prefer Fruity scents (Strawberry, Yuzu, Peach).</p>
+                    <p><span class="highlight">40.7%</span> prefer Floral scents (Rose, Lavender, Green Tea).</p>
+                    <p>Overall, 58.9% of users actively prefer scented/flavored options.</p>
+                </div>
+            </div>
+            <div class="fade-in">
+                <h2>Price Positioning</h2>
+                <p>Our market survey clearly indicates the sweet spot for a high-quality lip balm.</p>
+                <div class="stat-card">
+                    <span class="stat-number" style="font-size: 2.5rem;">100 - 150 THB</span>
+                    <p>Target Price Range</p>
+                    <p><strong>51.9%</strong> of respondents cap their spending in this exact range, guiding our ideal retail price point.</p>
+                </div>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="section">
-            Further understanding and contacts
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 class="fade-in text-center" style="text-align: center;">Pricing Strategy & Lifecycle</h2>
+            <div class="grid-2" style="margin-top: 3rem;">
+                <div class="pro-con-box fade-in">
+                    <h3>Phase 1: Initial Launch</h3>
+                    <p><strong>Penetration Pricing:</strong> 20% sale/discount for the first 3 months.</p>
+                    <ul style="margin-top: 1rem; padding-left: 20px;">
+                        <li><strong>Pros:</strong> Quickly grabs market share; encourages buyers to try our unique design.</li>
+                        <li><strong>Cons:</strong> Results in smaller profit margins initially; high production costs risk early negative cash flow.</li>
+                    </ul>
+                </div>
+                <div class="pro-con-box fade-in" style="transition-delay: 0.2s;">
+                    <h3>Phase 2: When Established</h3>
+                    <p><strong>Competitive Pricing</strong></p>
+                    <ul style="margin-top: 1rem; padding-left: 20px;">
+                        <li><strong>Pros:</strong> Differentiates brand through USP rather than price; retains loyal customers despite small price increases.</li>
+                        <li><strong>Cons:</strong> Must rely heavily on non-price ways to attract sales; monitoring competitor prices is time-consuming.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="section">
-            You can contact me on Discord, username 3linear. My timezone is GMT+8. You may also email me at alphastopmotion@gmail.com.
+    </section>
+
+    <section id="advertising">
+        <div class="container grid-2">
+            <div class="fade-in">
+                <h2>Go-to-Market Strategy</h2>
+                <h3>Distribution</h3>
+                <p>Omnichannel approach focusing on specialty beauty retailers (<span class="highlight">Sephora, Beautrium, eveandboy</span>) alongside direct-to-consumer sales via the PUSH. website for global reach.</p>
+                
+                <h3 style="margin-top: 2rem;">Advertising Focus</h3>
+                <p>Our Unique Selling Proposition (USP) is the focal point. We will heavily utilize vertical video formats (TikTok, Instagram Reels) to visually demonstrate the push-up mechanism solving the frustration of wasted product.</p>
+                <p><em>Risks mitigated:</em> To combat intense competition and ad fatigue, we are budgeting for continuous, fresh content creation.</p>
+            </div>
+            <div class="fade-in" style="text-align: center; background: #fff; padding: 1rem; border-radius: 12px; transform: rotate(2deg);">
+                <div style="background: var(--brand-pink); padding: 4rem 2rem; border-radius: 8px;">
+                    <h2 style="font-size: 3rem;">PUSH. PEACH.</h2>
+                    <h3 style="margin-top: 2rem;">NEVER BE FRUSTRATED OVER REMAINING PRODUCT AGAIN.</h3>
+                </div>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="section">
-            As I said, I, at this time, would not want to be contracted for any 3d modeling. However, I will start posting videos explaining ways to do things related to modeling on YouTube. My handle is jeff29365.
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-            As for animating, in the near future, I may start offering contracts for animating. Though, at this time, I do not offer any form of contracts for animating or 3d modeling.
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-            IGCSE notes
-        </div>
-        <div class="section">
-          IGCSE notes will be offered at fluctuating prices, so currently I will not put a price. One more thing to note is that different parts of science, i.e., chemistry and physics, are sold separately. Lastly, I offer a discount code "ALPHA" for the first 10 people who order a copy and use the discount. This is a limited offer and is a 10% discount. to head to the website, type nas.io/cosmicpanpan
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-            Lastly, this was written in HTML, and this site is currently being developed, so it may change!
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-            Honorary mention to varpourwastaken for inspiring me!
-        </div>
-        <div class="divider"></div>
-        <div class="image">
-            -Obfuscated for fun :)-
-        </div>
-    </div>
+    </section>
+
     <script>
-        (function(){
-            let _0x2f5f=["\x6C\x6F\x61\x64\x69\x6E\x67\x2D\x73\x63\x72\x65\x65\x6E"];let _0x27c3=["\x66\x61\x64\x65\x4F\x75\x74"];let _0x1a2b=document.querySelector(_0x2f5f[0]);window.addEventListener("\x6C\x6F\x61\x64",function(){if(_0x1a2b){_0x1a2b.style[_0x27c3[0]]="\x66\x61\x64\x65\x4F\x75\x74\x20\x35\x73\x20\x66\x6F\x72\x77\x61\x72\x64";}})})();
+        // Intersection Observer to handle fade-in animations on scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in');
+            
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
     </script>
 </body>
 </html>
